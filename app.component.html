@@ -1,0 +1,11 @@
+<app-header>[count]="count"</app-header>
+<div class="novels">
+  <div class="novel" *ngFor="let n of Novels">
+    <img src={{n.image}} alt={{n.title}}>
+    <h2><strong>{{n.title}}....</strong></h2>
+    <div>
+      <button (click)="incr()">+ Add</button>
+      <button (click)="remove(n.id)">Delete ❎</button>
+    </div>
+  </div>
+</div>
